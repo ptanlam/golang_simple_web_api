@@ -1,13 +1,7 @@
 package main
 
-import (
-	"net/http"
-)
+import "github.com/ptanlam/golang_simple_web_api/app"
 
 func main() {
-	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-		w.Write([]byte("Hello World!"))
-	})
-
-	http.ListenAndServe(":3000", nil)
+	app.Start()
 }
